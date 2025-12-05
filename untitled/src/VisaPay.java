@@ -14,6 +14,6 @@ public class VisaPay extends Payment{
 
     @Override
     public void printReceipt() {
-
+        customer.getOrderinfo();
     }
 }

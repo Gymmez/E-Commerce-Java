@@ -1,18 +1,14 @@
-import java.util.List;
-import java.util.ArrayList;
-
 public class Customer {
     // attributes declaration
     private int customerID;
     private String name;
     private String address;
-    private List<Order> orders;
+    Order order;
 
     public Customer(int customerID, String name, String address) {
         this.customerID = customerID;
         this.name = name;
         this.address = address;
-        this.orders = new ArrayList<>();
     }
 
     public int getCustomerID() {
@@ -31,13 +27,16 @@ public class Customer {
     }
 
     public void placeOrder(Order order) {
-        orders.add(order);
+        this.order=order;
         System.out.println("New Order Placed");
     }
 
-    public void displayOrders() {
-        for (Order order : orders) {
-            System.out.println(order);
-        }
+    public Order getOrder() {
+        return order;
+    }
+    public void getOrderinfo(){
+        System.out.println(order.getOrderID());
+        order.displayOrderItems();
+        System.out.println(order.getPrice());
     }
 }

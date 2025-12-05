@@ -10,6 +10,6 @@ public class CashPay extends Payment{
 
     @Override
     public void printReceipt() {
-
+        customer.getOrderinfo();
     }
 }
