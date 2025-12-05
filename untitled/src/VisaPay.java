@@ -3,8 +3,8 @@ import java.time.LocalDate;
 public class VisaPay extends Payment{
     String holderName;
     String cardNumber;
-    public VisaPay(int paymentId, LocalDate paymentDate, double amount,String holderName,String cardNumber){
-        super(paymentId,paymentDate, amount, "Visa");
+    public VisaPay(int paymentId, LocalDate paymentDate, double amount,String holderName,String cardNumber,Customer customer){
+        super(paymentId,paymentDate, amount, "Visa",customer);
         this.holderName=holderName;
         this.cardNumber=cardNumber;
     }

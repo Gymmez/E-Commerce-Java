@@ -5,12 +5,13 @@ public abstract class Payment implements Pay {
     protected LocalDate paymentDate;
     protected double amount;
     protected String method;
-
-    public Payment(int paymentId, LocalDate paymentDate, double amount, String method) {
+    protected Customer customer;
+    public Payment(int paymentId, LocalDate paymentDate, double amount, String method,Customer customer) {
         this.paymentId = paymentId;
         this.paymentDate = paymentDate;
         this.amount = amount;
         this.method = method;
+        this.customer=customer;
     }
 
     public abstract void makePayment(double amount);
