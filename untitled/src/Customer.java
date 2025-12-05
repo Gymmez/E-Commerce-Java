@@ -15,6 +15,21 @@ public class Customer {
         this.orders = new ArrayList<>();
     }
 
+    public int getCustomerID() {
+        return customerID;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void placeOrder(Order order) {
         orders.add(order);
         System.out.println("New Order Placed");
