@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.6"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafx.LoginController"
+      alignment="CENTER"
+      spacing="15"
+      prefWidth="400"
+      prefHeight="300">
+
+    <Label text="E-Commerce Login" style="-fx-font-size: 20px;"/>
+
+    <TextField fx:id="nameField" promptText="Enter your name"/>
+    <TextField fx:id="emailField" promptText="Enter your email"/>
+
+    <Button text="Login" onAction="#handleLogin"/>
+
+</VBox>

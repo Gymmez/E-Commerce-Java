@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.6"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafx.PaymentController"
+      spacing="15"
+      alignment="CENTER"
+      prefWidth="500"
+      prefHeight="400">
+
+    <Label text="Payment Method" style="-fx-font-size: 20px;"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <RadioButton fx:id="cashRadio" text="Cash" toggleGroup="$paymentGroup"/>
+        <RadioButton fx:id="visaRadio" text="Visa" toggleGroup="$paymentGroup"/>
+    </HBox>
+
+    <!-- Visa Fields -->
+    <VBox fx:id="visaBox" spacing="10" visible="false">
+        <TextField fx:id="cardNameField" promptText="Card Name"/>
+        <TextField fx:id="cardNumberField" promptText="Card Number"/>
+    </VBox>
+
+    <!-- Amount -->
+    <TextField fx:id="amountField" promptText="Amount"/>
+
+    <HBox alignment="BOTTOM_RIGHT" prefWidth="450">
+        <Button text="Pay" onAction="#handlePay"/>
+    </HBox>
+
+</VBox>

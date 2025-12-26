@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.6"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafx.CheckoutController"
+      spacing="20"
+      alignment="CENTER"
+      prefWidth="500"
+      prefHeight="400">
+
+    <Label text="Checkout Summary" style="-fx-font-size: 18px;" />
+
+    <TableView fx:id="orderTable" prefHeight="250" prefWidth="460">
+        <columns>
+            <TableColumn text="Item ID" prefWidth="150"/>
+            <TableColumn text="Item Name" prefWidth="150"/>
+            <TableColumn text="Price" prefWidth="160"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="BOTTOM_RIGHT" prefWidth="460">
+        <Button text="Pay Now" onAction="#goToPayment"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21.0.6"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.javafx.CatalogController"
+      spacing="15"
+      alignment="CENTER"
+      prefWidth="600"
+      prefHeight="400">
+
+    <Label text="Product Catalogue" style="-fx-font-size: 20px;"/>
+
+    <TableView fx:id="table" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="idColumn" text="OrderItemID" prefWidth="150"/>
+            <TableColumn fx:id="nameColumn" text="Item Name" prefWidth="200"/>
+            <TableColumn fx:id="priceColumn" text="Item Price" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Add to Cart"/>
+        <Button text="Go to Checkout" onAction="#goToCheckout"/>
+    </HBox>
+
+</VBox>
