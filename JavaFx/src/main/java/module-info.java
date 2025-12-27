@@ -11,6 +11,7 @@ module com.example.javafx {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires jdk.compiler;
+    requires java.net.http;
 
     opens com.example.javafx to javafx.fxml;
     exports com.example.javafx;

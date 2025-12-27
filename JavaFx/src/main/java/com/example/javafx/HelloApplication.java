@@ -9,6 +9,8 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     private Stage primaryStage;
+    private Order currentOrder = new Order("ORDER-1");
+
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -70,6 +72,12 @@ public class HelloApplication extends Application {
 
         primaryStage.setScene(scene);
     }
+
+
+    public Order getCurrentOrder() {
+        return currentOrder;
+    }
+
 
 
     public static void main(String[] args) {

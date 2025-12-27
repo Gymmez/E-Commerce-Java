@@ -11,6 +11,7 @@ public class CatalogItem {
         this.itemPrice = itemPrice;
     }
 
+    // Getters
     public int getOrderItemID() {
         return orderItemID;
     }
@@ -21,5 +22,33 @@ public class CatalogItem {
 
     public double getItemPrice() {
         return itemPrice;
+    }
+
+    // Setters
+    public void setOrderItemID(int orderItemID) {
+        this.orderItemID = orderItemID;
+    }
+
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+
+    public void setItemPrice(double itemPrice) {
+        this.itemPrice = itemPrice;
+    }
+
+    // Convert to JSON string
+    public String toJson() {
+        return """
+            {
+                "name": "%s",
+                "price": %.2f
+            }
+            """.formatted(getItemName(), getItemPrice());
+    }
+
+    @Override
+    public String toString() {
+        return itemName + "  $" + itemPrice;
     }
 }

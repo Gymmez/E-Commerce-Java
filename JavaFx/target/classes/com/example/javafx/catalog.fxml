@@ -22,7 +22,7 @@
     </TableView>
 
     <HBox spacing="20" alignment="CENTER">
-        <Button text="Add to Cart"/>
+        <Button text="Add to Cart" onAction="#addToCart" />
         <Button text="Go to Checkout" onAction="#goToCheckout"/>
     </HBox>
 
